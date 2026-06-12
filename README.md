@@ -50,6 +50,7 @@ All experiment drivers are run from the repository root, e.g.
 | Decoder grid (pure depolarizing cross-check) | `notebooks/colab_scaling.ipynb` (decoder cell) | `results/decoder_grid.json` |
 | QAOA depth/restart/warm-start ablation (appendix) | `scripts/phase_a_qaoa_depth.py` | `results/qaoa_depth_ablation.json` |
 | Hardness control (mRMR vs. frustrated, appendix) | `scripts/phase_d_hardness_control.py` | `results/hardness_control.json` |
+| Robustness across classifiers (SVM / kNN / LogReg / RF) | `scripts/phase4_multiclf.py` | `results/phase4_multiclf.json` |
 | Statistical analysis (bootstrap CIs, paired tests, appendix) | `scripts/stats_analysis.py` | `results/stats_summary.{json,md}` |
 | All data figures | `scripts/make_figures.py` (reads `results/*.json`) | `figures/*.{png,pdf}` |
 | Concept-figure data (redundancy matrix, ⟨Z⟩-damping demo) | `scripts/make_fig_data.py` | `figures/redundancy_matrix.csv`, `figures/zdamp_demo.json` |
