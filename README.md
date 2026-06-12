@@ -3,7 +3,7 @@
 Code, data, and results for the paper:
 
 > **Decoding strategy governs noise-resilient quantum feature selection: closed-form criteria and a redundancy-aware benchmark**
-> Yi Zheng, Cheng Xie, Chenlei Fang, Ying Zhou, Wei Pan, Haobin Shi
+> Cheng Xie, Yi Zheng, Chenlei Fang, Ying Zhou, Wei Pan, Haobin Shi
 > School of Computer Science, Northwestern Polytechnical University
 > (submitted to *Knowledge-Based Systems*, 2026)
 
