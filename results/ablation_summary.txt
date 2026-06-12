@@ -1,0 +1,46 @@
+device lightning.qubit/adjoint  records 256  cells 4
+=== n,lam = (12, 1.0) ===
+  Random-mRMR     dJ=+0.000 (>0:0.00)  dSVM=+0.000
+  Greedy-mRMR     dJ=+0.006 (>0:0.12)  dSVM=+0.001
+  SA              dJ=+0.000 (>0:0.00)  dSVM=+0.000
+  MeanField(cl)   dJ=+0.000 (>0:0.00)  dSVM=+0.000
+  VQC(no-ent)     dJ=+0.066 (>0:0.75)  dSVM=+0.009
+  VQC(ring)       dJ=+0.021 (>0:0.50)  dSVM=+0.001
+  VQC(all)        dJ=+0.003 (>0:0.12)  dSVM=-0.001
+  QAOA-mRMR       dJ=+0.017 (>0:0.25)  dSVM=-0.002
+=== n,lam = (12, 2.0) ===
+  Random-mRMR     dJ=+0.000 (>0:0.00)  dSVM=+0.000
+  Greedy-mRMR     dJ=+0.018 (>0:0.25)  dSVM=+0.001
+  SA              dJ=+0.000 (>0:0.00)  dSVM=+0.000
+  MeanField(cl)   dJ=+0.000 (>0:0.00)  dSVM=+0.000
+  VQC(no-ent)     dJ=+0.137 (>0:0.88)  dSVM=+0.024
+  VQC(ring)       dJ=+0.046 (>0:0.50)  dSVM=+0.011
+  VQC(all)        dJ=+0.006 (>0:0.12)  dSVM=+0.002
+  QAOA-mRMR       dJ=+0.036 (>0:0.38)  dSVM=+0.006
+=== n,lam = (14, 1.0) ===
+  Random-mRMR     dJ=+0.011 (>0:0.12)  dSVM=+0.005
+  Greedy-mRMR     dJ=+0.000 (>0:0.00)  dSVM=+0.000
+  SA              dJ=+0.000 (>0:0.00)  dSVM=+0.000
+  MeanField(cl)   dJ=+0.000 (>0:0.00)  dSVM=+0.000
+  VQC(no-ent)     dJ=+0.062 (>0:0.62)  dSVM=+0.020
+  VQC(ring)       dJ=+0.015 (>0:0.38)  dSVM=+0.002
+  VQC(all)        dJ=+0.011 (>0:0.50)  dSVM=+0.005
+  QAOA-mRMR       dJ=+0.039 (>0:0.62)  dSVM=+0.012
+=== n,lam = (14, 2.0) ===
+  Random-mRMR     dJ=+0.000 (>0:0.00)  dSVM=+0.000
+  Greedy-mRMR     dJ=+0.012 (>0:0.25)  dSVM=-0.003
+  SA              dJ=+0.000 (>0:0.00)  dSVM=+0.000
+  MeanField(cl)   dJ=+0.010 (>0:0.38)  dSVM=-0.002
+  VQC(no-ent)     dJ=+0.088 (>0:1.00)  dSVM=+0.022
+  VQC(ring)       dJ=+0.077 (>0:1.00)  dSVM=+0.004
+  VQC(all)        dJ=+0.037 (>0:0.88)  dSVM=+0.006
+  QAOA-mRMR       dJ=+0.081 (>0:0.62)  dSVM=+0.003
+=== POOLED over all cells ===
+  Random-mRMR     dJ=+0.0027 (>0:0.03)  dSVM=+0.0012 (n=32)
+  Greedy-mRMR     dJ=+0.0092 (>0:0.16)  dSVM=-0.0002 (n=32)
+  SA              dJ=+0.0000 (>0:0.00)  dSVM=+0.0000 (n=32)
+  MeanField(cl)   dJ=+0.0024 (>0:0.09)  dSVM=-0.0005 (n=32)
+  VQC(no-ent)     dJ=+0.0881 (>0:0.81)  dSVM=+0.0187 (n=32)
+  VQC(ring)       dJ=+0.0397 (>0:0.59)  dSVM=+0.0044 (n=32)
+  VQC(all)        dJ=+0.0144 (>0:0.41)  dSVM=+0.0030 (n=32)
+  QAOA-mRMR       dJ=+0.0432 (>0:0.47)  dSVM=+0.0049 (n=32)

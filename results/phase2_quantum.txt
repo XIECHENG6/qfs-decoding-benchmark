@@ -1,0 +1,18 @@
+Phase-2 quantum de-risk: device=lightning.qubit/adjoint, n=12, k=4, lambda=1.0, L=3, 3 seeds
+  seed 0: exactSVM=0.770 | Random-mRMR dJ=+0.000 | MeanField(cl) dJ=+0.000 | VQC(ring) dJ=+0.431 | VQC(no-ent) dJ=+  seed 1: exactSVM=0.770 | Random-mRMR dJ=+0.000 | MeanField(cl) dJ=+0.000 | VQC(ring) dJ=+0.089 | VQC(no-ent) dJ=+0.025
+  seed 2: exactSVM=0.793 | Random-mRMR dJ=+0.000 | MeanField(cl) dJ=+0.000 | VQC(ring) dJ=+0.068 | VQC(no-ent) dJ=+0.236
+  seed 3: exactSVM=0.735 | Random-mRMR dJ=-0.000 | MeanField(cl) dJ=-0.000 | VQC(ring) dJ=+0.126 | VQC(no-ent) dJ=+0.216
+  seed 4: exactSVM=0.777 | Random-mRMR dJ=+0.004 | MeanField(cl) dJ=+0.000 | VQC(ring) dJ=+0.066 | VQC(no-ent) dJ=+0.066
+
+============================================================
+ method               dSVM (mean¡Àstd)   dJ (mean)
+ -----------------------------------------------
+ Random-mRMR          0.003 ¡À 0.007         0.001
+ MeanField(cl)        0.000 ¡À 0.000         0.000
+ VQC(ring)            0.007 ¡À 0.016         0.095
+ VQC(no-ent)          0.027 ¡À 0.018         0.144
+============================================================
+
+ dSVM/dJ = exact - method. ~0 everywhere => quantum circuit and ring
+ entanglement add nothing over classical mean-field. If VQC(ring) ~
+ VQC(no-ent), entanglement is confirmed irrelevant.

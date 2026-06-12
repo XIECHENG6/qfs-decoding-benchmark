@@ -1,0 +1,564 @@
+{
+  "config": {
+    "ns": [
+      16,
+      18,
+      20,
+      22
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "lams": [
+      1.0,
+      2.0
+    ],
+    "k_frac": 0.42,
+    "n_samples": 600,
+    "qaoa": {
+      "p": 3,
+      "mu": 2.0,
+      "steps": 150,
+      "lr": 0.04,
+      "restarts": 6
+    }
+  },
+  "note": "n=16 from local run (scaling_qaoa_fair.out); n=18-22 from Colab. Same instances/seeds/k/lambda as scaling_ablation.json.",
+  "records": [
+    {
+      "n": 16,
+      "k": 7,
+      "lam": 1.0,
+      "seed": 0,
+      "method": "QAOA-fair",
+      "dJ": 0.037,
+      "source": "local .out (3 d.p.)"
+    },
+    {
+      "n": 16,
+      "k": 7,
+      "lam": 1.0,
+      "seed": 1,
+      "method": "QAOA-fair",
+      "dJ": 0.0,
+      "source": "local .out (3 d.p.)"
+    },
+    {
+      "n": 16,
+      "k": 7,
+      "lam": 1.0,
+      "seed": 2,
+      "method": "QAOA-fair",
+      "dJ": 0.159,
+      "source": "local .out (3 d.p.)"
+    },
+    {
+      "n": 16,
+      "k": 7,
+      "lam": 1.0,
+      "seed": 3,
+      "method": "QAOA-fair",
+      "dJ": 0.013,
+      "source": "local .out (3 d.p.)"
+    },
+    {
+      "n": 16,
+      "k": 7,
+      "lam": 1.0,
+      "seed": 4,
+      "method": "QAOA-fair",
+      "dJ": 0.0,
+      "source": "local .out (3 d.p.)"
+    },
+    {
+      "n": 16,
+      "k": 7,
+      "lam": 1.0,
+      "seed": 5,
+      "method": "QAOA-fair",
+      "dJ": 0.013,
+      "source": "local .out (3 d.p.)"
+    },
+    {
+      "n": 16,
+      "k": 7,
+      "lam": 1.0,
+      "seed": 6,
+      "method": "QAOA-fair",
+      "dJ": 0.04,
+      "source": "local .out (3 d.p.)"
+    },
+    {
+      "n": 16,
+      "k": 7,
+      "lam": 1.0,
+      "seed": 7,
+      "method": "QAOA-fair",
+      "dJ": 0.0,
+      "source": "local .out (3 d.p.)"
+    },
+    {
+      "n": 16,
+      "k": 7,
+      "lam": 2.0,
+      "seed": 0,
+      "method": "QAOA-fair",
+      "dJ": 0.207,
+      "source": "local .out (3 d.p.)"
+    },
+    {
+      "n": 16,
+      "k": 7,
+      "lam": 2.0,
+      "seed": 1,
+      "method": "QAOA-fair",
+      "dJ": 0.0,
+      "source": "local .out (3 d.p.)"
+    },
+    {
+      "n": 16,
+      "k": 7,
+      "lam": 2.0,
+      "seed": 2,
+      "method": "QAOA-fair",
+      "dJ": 0.132,
+      "source": "local .out (3 d.p.)"
+    },
+    {
+      "n": 16,
+      "k": 7,
+      "lam": 2.0,
+      "seed": 3,
+      "method": "QAOA-fair",
+      "dJ": 0.091,
+      "source": "local .out (3 d.p.)"
+    },
+    {
+      "n": 16,
+      "k": 7,
+      "lam": 2.0,
+      "seed": 4,
+      "method": "QAOA-fair",
+      "dJ": 0.055,
+      "source": "local .out (3 d.p.)"
+    },
+    {
+      "n": 16,
+      "k": 7,
+      "lam": 2.0,
+      "seed": 5,
+      "method": "QAOA-fair",
+      "dJ": 0.145,
+      "source": "local .out (3 d.p.)"
+    },
+    {
+      "n": 16,
+      "k": 7,
+      "lam": 2.0,
+      "seed": 6,
+      "method": "QAOA-fair",
+      "dJ": 0.15,
+      "source": "local .out (3 d.p.)"
+    },
+    {
+      "n": 16,
+      "k": 7,
+      "lam": 2.0,
+      "seed": 7,
+      "method": "QAOA-fair",
+      "dJ": 0.058,
+      "source": "local .out (3 d.p.)"
+    },
+    {
+      "n": 18,
+      "k": 8,
+      "lam": 1.0,
+      "seed": 0,
+      "method": "QAOA-fair",
+      "dJ": 0.3076320807531018
+    },
+    {
+      "n": 18,
+      "k": 8,
+      "lam": 1.0,
+      "seed": 1,
+      "method": "QAOA-fair",
+      "dJ": 0.13474939643697037
+    },
+    {
+      "n": 18,
+      "k": 8,
+      "lam": 1.0,
+      "seed": 2,
+      "method": "QAOA-fair",
+      "dJ": 0.06693248106814076
+    },
+    {
+      "n": 18,
+      "k": 8,
+      "lam": 1.0,
+      "seed": 3,
+      "method": "QAOA-fair",
+      "dJ": 0.06413588941094911
+    },
+    {
+      "n": 18,
+      "k": 8,
+      "lam": 1.0,
+      "seed": 4,
+      "method": "QAOA-fair",
+      "dJ": 0.13748182906559442
+    },
+    {
+      "n": 18,
+      "k": 8,
+      "lam": 1.0,
+      "seed": 5,
+      "method": "QAOA-fair",
+      "dJ": 0.18170417273294115
+    },
+    {
+      "n": 18,
+      "k": 8,
+      "lam": 1.0,
+      "seed": 6,
+      "method": "QAOA-fair",
+      "dJ": 0.024847953517183496
+    },
+    {
+      "n": 18,
+      "k": 8,
+      "lam": 1.0,
+      "seed": 7,
+      "method": "QAOA-fair",
+      "dJ": 0.1965904072167789
+    },
+    {
+      "n": 18,
+      "k": 8,
+      "lam": 2.0,
+      "seed": 0,
+      "method": "QAOA-fair",
+      "dJ": 0.23013784572860363
+    },
+    {
+      "n": 18,
+      "k": 8,
+      "lam": 2.0,
+      "seed": 1,
+      "method": "QAOA-fair",
+      "dJ": 0.0720187786089026
+    },
+    {
+      "n": 18,
+      "k": 8,
+      "lam": 2.0,
+      "seed": 2,
+      "method": "QAOA-fair",
+      "dJ": 0.14851384335769313
+    },
+    {
+      "n": 18,
+      "k": 8,
+      "lam": 2.0,
+      "seed": 3,
+      "method": "QAOA-fair",
+      "dJ": 0.3402054475326479
+    },
+    {
+      "n": 18,
+      "k": 8,
+      "lam": 2.0,
+      "seed": 4,
+      "method": "QAOA-fair",
+      "dJ": 0.17828160306237284
+    },
+    {
+      "n": 18,
+      "k": 8,
+      "lam": 2.0,
+      "seed": 5,
+      "method": "QAOA-fair",
+      "dJ": 0.08051384030525699
+    },
+    {
+      "n": 18,
+      "k": 8,
+      "lam": 2.0,
+      "seed": 6,
+      "method": "QAOA-fair",
+      "dJ": 0.08250051462284258
+    },
+    {
+      "n": 18,
+      "k": 8,
+      "lam": 2.0,
+      "seed": 7,
+      "method": "QAOA-fair",
+      "dJ": 0.07821469703851913
+    },
+    {
+      "n": 20,
+      "k": 8,
+      "lam": 1.0,
+      "seed": 0,
+      "method": "QAOA-fair",
+      "dJ": 0.0793954490049209
+    },
+    {
+      "n": 20,
+      "k": 8,
+      "lam": 1.0,
+      "seed": 1,
+      "method": "QAOA-fair",
+      "dJ": 0.144040313358468
+    },
+    {
+      "n": 20,
+      "k": 8,
+      "lam": 1.0,
+      "seed": 2,
+      "method": "QAOA-fair",
+      "dJ": 0.17892957187728564
+    },
+    {
+      "n": 20,
+      "k": 8,
+      "lam": 1.0,
+      "seed": 3,
+      "method": "QAOA-fair",
+      "dJ": 0.2692870569708403
+    },
+    {
+      "n": 20,
+      "k": 8,
+      "lam": 1.0,
+      "seed": 4,
+      "method": "QAOA-fair",
+      "dJ": 0.1824585992121328
+    },
+    {
+      "n": 20,
+      "k": 8,
+      "lam": 1.0,
+      "seed": 5,
+      "method": "QAOA-fair",
+      "dJ": 0.13488640483855496
+    },
+    {
+      "n": 20,
+      "k": 8,
+      "lam": 1.0,
+      "seed": 6,
+      "method": "QAOA-fair",
+      "dJ": 0.08558431922892096
+    },
+    {
+      "n": 20,
+      "k": 8,
+      "lam": 1.0,
+      "seed": 7,
+      "method": "QAOA-fair",
+      "dJ": 0.06460880340170538
+    },
+    {
+      "n": 20,
+      "k": 8,
+      "lam": 2.0,
+      "seed": 0,
+      "method": "QAOA-fair",
+      "dJ": 0.15078025674518902
+    },
+    {
+      "n": 20,
+      "k": 8,
+      "lam": 2.0,
+      "seed": 1,
+      "method": "QAOA-fair",
+      "dJ": 0.17161572809724746
+    },
+    {
+      "n": 20,
+      "k": 8,
+      "lam": 2.0,
+      "seed": 2,
+      "method": "QAOA-fair",
+      "dJ": 0.10651391224594109
+    },
+    {
+      "n": 20,
+      "k": 8,
+      "lam": 2.0,
+      "seed": 3,
+      "method": "QAOA-fair",
+      "dJ": 0.2786558242686721
+    },
+    {
+      "n": 20,
+      "k": 8,
+      "lam": 2.0,
+      "seed": 4,
+      "method": "QAOA-fair",
+      "dJ": 0.07582890947805376
+    },
+    {
+      "n": 20,
+      "k": 8,
+      "lam": 2.0,
+      "seed": 5,
+      "method": "QAOA-fair",
+      "dJ": 0.0594777028523954
+    },
+    {
+      "n": 20,
+      "k": 8,
+      "lam": 2.0,
+      "seed": 6,
+      "method": "QAOA-fair",
+      "dJ": 0.06471284508128083
+    },
+    {
+      "n": 20,
+      "k": 8,
+      "lam": 2.0,
+      "seed": 7,
+      "method": "QAOA-fair",
+      "dJ": 0.12166380836458657
+    },
+    {
+      "n": 22,
+      "k": 9,
+      "lam": 1.0,
+      "seed": 0,
+      "method": "QAOA-fair",
+      "dJ": 0.40625192767590657
+    },
+    {
+      "n": 22,
+      "k": 9,
+      "lam": 1.0,
+      "seed": 1,
+      "method": "QAOA-fair",
+      "dJ": 0.20001691095536983
+    },
+    {
+      "n": 22,
+      "k": 9,
+      "lam": 1.0,
+      "seed": 2,
+      "method": "QAOA-fair",
+      "dJ": 0.37027413350688376
+    },
+    {
+      "n": 22,
+      "k": 9,
+      "lam": 1.0,
+      "seed": 3,
+      "method": "QAOA-fair",
+      "dJ": 0.1828868178567703
+    },
+    {
+      "n": 22,
+      "k": 9,
+      "lam": 1.0,
+      "seed": 4,
+      "method": "QAOA-fair",
+      "dJ": 0.33606697817884024
+    },
+    {
+      "n": 22,
+      "k": 9,
+      "lam": 1.0,
+      "seed": 5,
+      "method": "QAOA-fair",
+      "dJ": 0.027106341793562527
+    },
+    {
+      "n": 22,
+      "k": 9,
+      "lam": 1.0,
+      "seed": 6,
+      "method": "QAOA-fair",
+      "dJ": 0.1775607748524194
+    },
+    {
+      "n": 22,
+      "k": 9,
+      "lam": 1.0,
+      "seed": 7,
+      "method": "QAOA-fair",
+      "dJ": 0.07414143577120635
+    },
+    {
+      "n": 22,
+      "k": 9,
+      "lam": 2.0,
+      "seed": 0,
+      "method": "QAOA-fair",
+      "dJ": 0.2281676014063152
+    },
+    {
+      "n": 22,
+      "k": 9,
+      "lam": 2.0,
+      "seed": 1,
+      "method": "QAOA-fair",
+      "dJ": 0.22795551587564278
+    },
+    {
+      "n": 22,
+      "k": 9,
+      "lam": 2.0,
+      "seed": 2,
+      "method": "QAOA-fair",
+      "dJ": 0.30937103986456593
+    },
+    {
+      "n": 22,
+      "k": 9,
+      "lam": 2.0,
+      "seed": 3,
+      "method": "QAOA-fair",
+      "dJ": 0.2162357878050083
+    },
+    {
+      "n": 22,
+      "k": 9,
+      "lam": 2.0,
+      "seed": 4,
+      "method": "QAOA-fair",
+      "dJ": 0.32790323998606885
+    },
+    {
+      "n": 22,
+      "k": 9,
+      "lam": 2.0,
+      "seed": 5,
+      "method": "QAOA-fair",
+      "dJ": 0.38162970716138434
+    },
+    {
+      "n": 22,
+      "k": 9,
+      "lam": 2.0,
+      "seed": 6,
+      "method": "QAOA-fair",
+      "dJ": 0.2270399875498459
+    },
+    {
+      "n": 22,
+      "k": 9,
+      "lam": 2.0,
+      "seed": 7,
+      "method": "QAOA-fair",
+      "dJ": 0.08051767330328463
+    }
+  ]
+}

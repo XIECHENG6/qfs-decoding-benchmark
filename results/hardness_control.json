@@ -1,0 +1,350 @@
+{
+  "config": {
+    "ns": [
+      12,
+      14
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "lam": 1.0,
+    "k_frac": 0.42,
+    "n_samples": 600,
+    "qaoa": {
+      "p": 3,
+      "mu": 2.0,
+      "steps": 150,
+      "lr": 0.04,
+      "restarts": 6
+    }
+  },
+  "records": [
+    {
+      "problem": "mRMR",
+      "n": 12,
+      "k": 5,
+      "seed": 0,
+      "SA": 0.0,
+      "MeanField": 0.0,
+      "VQC(ring)": 0.0,
+      "QAOA(fair)": 0.0
+    },
+    {
+      "problem": "mRMR",
+      "n": 12,
+      "k": 5,
+      "seed": 1,
+      "SA": 2.220446049250313e-16,
+      "MeanField": 2.220446049250313e-16,
+      "VQC(ring)": 2.220446049250313e-16,
+      "QAOA(fair)": 2.220446049250313e-16
+    },
+    {
+      "problem": "mRMR",
+      "n": 12,
+      "k": 5,
+      "seed": 2,
+      "SA": 0.0,
+      "MeanField": 0.0,
+      "VQC(ring)": 0.0,
+      "QAOA(fair)": 0.0
+    },
+    {
+      "problem": "mRMR",
+      "n": 12,
+      "k": 5,
+      "seed": 3,
+      "SA": 2.220446049250313e-16,
+      "MeanField": 2.220446049250313e-16,
+      "VQC(ring)": 0.04121560983153416,
+      "QAOA(fair)": 2.220446049250313e-16
+    },
+    {
+      "problem": "mRMR",
+      "n": 12,
+      "k": 5,
+      "seed": 4,
+      "SA": 0.0,
+      "MeanField": 0.0,
+      "VQC(ring)": 0.09676316912297311,
+      "QAOA(fair)": 0.0
+    },
+    {
+      "problem": "mRMR",
+      "n": 12,
+      "k": 5,
+      "seed": 5,
+      "SA": 0.0,
+      "MeanField": 0.0,
+      "VQC(ring)": 0.0,
+      "QAOA(fair)": 0.040674579651853726
+    },
+    {
+      "problem": "mRMR",
+      "n": 12,
+      "k": 5,
+      "seed": 6,
+      "SA": -2.220446049250313e-16,
+      "MeanField": -2.220446049250313e-16,
+      "VQC(ring)": 0.0026813789777222485,
+      "QAOA(fair)": -2.220446049250313e-16
+    },
+    {
+      "problem": "mRMR",
+      "n": 12,
+      "k": 5,
+      "seed": 7,
+      "SA": 0.0,
+      "MeanField": 0.0,
+      "VQC(ring)": 0.025804752225573324,
+      "QAOA(fair)": 0.0
+    },
+    {
+      "problem": "mRMR",
+      "n": 14,
+      "k": 6,
+      "seed": 0,
+      "SA": 0.0,
+      "MeanField": 0.0,
+      "VQC(ring)": 0.0,
+      "QAOA(fair)": 0.0
+    },
+    {
+      "problem": "mRMR",
+      "n": 14,
+      "k": 6,
+      "seed": 1,
+      "SA": 0.0,
+      "MeanField": 0.0,
+      "VQC(ring)": 0.01712733622315521,
+      "QAOA(fair)": 0.0
+    },
+    {
+      "problem": "mRMR",
+      "n": 14,
+      "k": 6,
+      "seed": 2,
+      "SA": 0.0,
+      "MeanField": 0.0,
+      "VQC(ring)": 0.039946466289527915,
+      "QAOA(fair)": 0.12440392494885422
+    },
+    {
+      "problem": "mRMR",
+      "n": 14,
+      "k": 6,
+      "seed": 3,
+      "SA": -6.661338147750939e-16,
+      "MeanField": -6.661338147750939e-16,
+      "VQC(ring)": -6.661338147750939e-16,
+      "QAOA(fair)": 0.025657757617913335
+    },
+    {
+      "problem": "mRMR",
+      "n": 14,
+      "k": 6,
+      "seed": 4,
+      "SA": 0.0,
+      "MeanField": 0.0,
+      "VQC(ring)": 0.0,
+      "QAOA(fair)": 0.0
+    },
+    {
+      "problem": "mRMR",
+      "n": 14,
+      "k": 6,
+      "seed": 5,
+      "SA": 4.440892098500626e-16,
+      "MeanField": 4.440892098500626e-16,
+      "VQC(ring)": 0.06330041344449255,
+      "QAOA(fair)": 4.440892098500626e-16
+    },
+    {
+      "problem": "mRMR",
+      "n": 14,
+      "k": 6,
+      "seed": 6,
+      "SA": 4.440892098500626e-16,
+      "MeanField": 4.440892098500626e-16,
+      "VQC(ring)": 4.440892098500626e-16,
+      "QAOA(fair)": 0.0610224006245319
+    },
+    {
+      "problem": "mRMR",
+      "n": 14,
+      "k": 6,
+      "seed": 7,
+      "SA": 0.0,
+      "MeanField": 0.0,
+      "VQC(ring)": 0.0,
+      "QAOA(fair)": 0.0
+    },
+    {
+      "problem": "frustrated",
+      "n": 12,
+      "k": 5,
+      "seed": 0,
+      "SA": 0.0,
+      "MeanField": 0.0,
+      "VQC(ring)": 0.0,
+      "QAOA(fair)": 0.0
+    },
+    {
+      "problem": "frustrated",
+      "n": 12,
+      "k": 5,
+      "seed": 1,
+      "SA": -8.881784197001252e-16,
+      "MeanField": -8.881784197001252e-16,
+      "VQC(ring)": -8.881784197001252e-16,
+      "QAOA(fair)": -8.881784197001252e-16
+    },
+    {
+      "problem": "frustrated",
+      "n": 12,
+      "k": 5,
+      "seed": 2,
+      "SA": 8.881784197001252e-16,
+      "MeanField": 8.881784197001252e-16,
+      "VQC(ring)": 8.881784197001252e-16,
+      "QAOA(fair)": 8.881784197001252e-16
+    },
+    {
+      "problem": "frustrated",
+      "n": 12,
+      "k": 5,
+      "seed": 3,
+      "SA": 0.0,
+      "MeanField": 0.0,
+      "VQC(ring)": 0.0,
+      "QAOA(fair)": 0.0
+    },
+    {
+      "problem": "frustrated",
+      "n": 12,
+      "k": 5,
+      "seed": 4,
+      "SA": 1.7763568394002505e-15,
+      "MeanField": 1.7763568394002505e-15,
+      "VQC(ring)": 1.7763568394002505e-15,
+      "QAOA(fair)": 1.7763568394002505e-15
+    },
+    {
+      "problem": "frustrated",
+      "n": 12,
+      "k": 5,
+      "seed": 5,
+      "SA": 8.881784197001252e-16,
+      "MeanField": 0.44604395865590174,
+      "VQC(ring)": 0.45419700720151734,
+      "QAOA(fair)": 8.881784197001252e-16
+    },
+    {
+      "problem": "frustrated",
+      "n": 12,
+      "k": 5,
+      "seed": 6,
+      "SA": 0.0,
+      "MeanField": 0.0,
+      "VQC(ring)": 0.0,
+      "QAOA(fair)": 0.0
+    },
+    {
+      "problem": "frustrated",
+      "n": 12,
+      "k": 5,
+      "seed": 7,
+      "SA": 8.881784197001252e-16,
+      "MeanField": 0.2665174376720554,
+      "VQC(ring)": 0.2665174376720554,
+      "QAOA(fair)": 8.881784197001252e-16
+    },
+    {
+      "problem": "frustrated",
+      "n": 14,
+      "k": 6,
+      "seed": 0,
+      "SA": 0.0,
+      "MeanField": 0.0,
+      "VQC(ring)": 0.05428836923464342,
+      "QAOA(fair)": 0.0
+    },
+    {
+      "problem": "frustrated",
+      "n": 14,
+      "k": 6,
+      "seed": 1,
+      "SA": 0.0,
+      "MeanField": 0.2645255787332941,
+      "VQC(ring)": 0.2645255787332941,
+      "QAOA(fair)": 0.0
+    },
+    {
+      "problem": "frustrated",
+      "n": 14,
+      "k": 6,
+      "seed": 2,
+      "SA": 0.0,
+      "MeanField": 0.0,
+      "VQC(ring)": 0.32144781306753956,
+      "QAOA(fair)": 0.0
+    },
+    {
+      "problem": "frustrated",
+      "n": 14,
+      "k": 6,
+      "seed": 3,
+      "SA": 0.0,
+      "MeanField": 0.0,
+      "VQC(ring)": 0.0,
+      "QAOA(fair)": 0.0
+    },
+    {
+      "problem": "frustrated",
+      "n": 14,
+      "k": 6,
+      "seed": 4,
+      "SA": 0.0,
+      "MeanField": 0.0,
+      "VQC(ring)": 0.0,
+      "QAOA(fair)": 0.0
+    },
+    {
+      "problem": "frustrated",
+      "n": 14,
+      "k": 6,
+      "seed": 5,
+      "SA": -1.7763568394002505e-15,
+      "MeanField": -1.7763568394002505e-15,
+      "VQC(ring)": -1.7763568394002505e-15,
+      "QAOA(fair)": 0.9641441836388562
+    },
+    {
+      "problem": "frustrated",
+      "n": 14,
+      "k": 6,
+      "seed": 6,
+      "SA": 1.7763568394002505e-15,
+      "MeanField": 0.14365914944489688,
+      "VQC(ring)": 0.3932410576601999,
+      "QAOA(fair)": 1.7763568394002505e-15
+    },
+    {
+      "problem": "frustrated",
+      "n": 14,
+      "k": 6,
+      "seed": 7,
+      "SA": -1.7763568394002505e-15,
+      "MeanField": -1.7763568394002505e-15,
+      "VQC(ring)": -1.7763568394002505e-15,
+      "QAOA(fair)": -1.7763568394002505e-15
+    }
+  ]
+}
