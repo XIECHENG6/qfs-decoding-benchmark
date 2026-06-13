@@ -41,7 +41,7 @@ All experiment drivers are run from the repository root, e.g.
 | Paper item | Script | Frozen output |
 |---|---|---|
 | Table 1 (per-method benchmark), Fig. lambda-sweep | `scripts/phase1_derisk.py`, `scripts/phase1_tune.py` | `results/phase1_summary.json` |
-| Real-data benchmark (WDBC / Ionosphere / Sonar) | `scripts/phase1_realdata.py` (+ `scripts/uci_loader.py`) | `results/phase1_summary.json` |
+| Real-data benchmark (10 datasets, Fig. realdata + Appendix table) | `scripts/phase1_realdata.py` (+ `scripts/datasets.py`) | `results/realdata_benchmark.json` |
 | Entanglement ablation (n = 12, 14) | `scripts/phase2_ablation_strong.py` | `results/phase2_ablation_strong.json` |
 | Scaling table/figure (n = 16–22, classical + VQC) | `notebooks/colab_scaling.ipynb` (GPU statevector) | `results/scaling_ablation.json` |
 | QAOA scaling row, fair multi-restart setting | `notebooks/scaling_qaoa_fair.ipynb`, `scripts/qaoa_fair_rerun.py`, analysis: `scripts/analyze_qaoa_fair.py` | `results/scaling_qaoa_fair.json` (single-start: `results/scaling_qaoa.json`) |
@@ -50,7 +50,7 @@ All experiment drivers are run from the repository root, e.g.
 | Decoder grid (pure depolarizing cross-check) | `notebooks/colab_scaling.ipynb` (decoder cell) | `results/decoder_grid.json` |
 | QAOA depth/restart/warm-start ablation (appendix) | `scripts/phase_a_qaoa_depth.py` | `results/qaoa_depth_ablation.json` |
 | Hardness control (mRMR vs. frustrated, appendix) | `scripts/phase_d_hardness_control.py` | `results/hardness_control.json` |
-| Robustness across classifiers (SVM / kNN / LogReg / RF) | `scripts/phase4_multiclf.py` | `results/phase4_multiclf.json` |
+| Robustness across classifiers (10 datasets × SVM / kNN / LogReg / RF) | `scripts/phase4_multiclf.py` | `results/phase4_multiclf.json` |
 | Statistical analysis (bootstrap CIs, paired tests, appendix) | `scripts/stats_analysis.py` | `results/stats_summary.{json,md}` |
 | All data figures | `scripts/make_figures.py` (reads `results/*.json`) | `figures/*.{png,pdf}` |
 | Concept-figure data (redundancy matrix, ⟨Z⟩-damping demo) | `scripts/make_fig_data.py` | `figures/redundancy_matrix.csv`, `figures/zdamp_demo.json` |
@@ -62,9 +62,15 @@ All experiment drivers are run from the repository root, e.g.
 - `data/instance_seed0.npz` — the synthetic "relevance–redundancy trap" instance
   (seed 0) used in the per-method benchmark; the generator is
   `qfs_common.make_hard_instance`.
-- `data/uci/` — cached copies of the Ionosphere and Sonar datasets from the
-  [UCI Machine Learning Repository](https://archive.ics.uci.edu) (CC BY 4.0);
-  WDBC is loaded at runtime from scikit-learn.
+- `data/sets/*.npz` — the ten real-world benchmark datasets, repackaged offline
+  (float `X`, integer-coded `y`) by `scripts/fetch_datasets.py` and read by
+  `scripts/datasets.py`. Sources: scikit-learn (WDBC, Wine, Digits) and OpenML
+  (Ionosphere 59, Sonar 40, Parkinsons 1488, Spambase 44, QSAR-biodeg 1494,
+  Vehicle 54, Hill-Valley 1479). Re-fetch with `python scripts/fetch_datasets.py`
+  (needs a direct internet connection).
+- `data/uci/` — original cached Ionosphere/Sonar text files from the
+  [UCI Machine Learning Repository](https://archive.ics.uci.edu) (CC BY 4.0),
+  kept for provenance.
 
 ## License
 

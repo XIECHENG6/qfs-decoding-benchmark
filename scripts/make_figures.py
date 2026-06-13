@@ -242,37 +242,37 @@ def fig_lambda_sweep():
 # Figure 5 (F8): real-data benchmark (values are tab:realdata = phase1_realdata)
 # ---------------------------------------------------------------------------
 def fig_realdata():
-    # Recorded values from Table tab:realdata (downstream SVM gap vs exact optimum).
-    cols = ["WDBC", "Ionosphere", "Sonar"]
-    svm_star = [0.968, 0.928, 0.743]
-    methods = ["MI top-$k$", "Random", "Greedy", "Mean-field", "SA"]
-    vals = {
-        "WDBC":       [0.018,  0.000,  0.001, -0.001, 0.000],
-        "Ionosphere": [0.049,  0.007,  0.003, -0.002, 0.000],
-        "Sonar":      [0.007, -0.003, -0.007,  0.000, 0.000],
-    }
-    colours = ["#C44E52", "#9a9a9a", "#7fa3d6", "#5b82c2", "#1b3a6b"]
-    x = np.arange(len(cols)); w = 0.16
-    fig, ax = plt.subplots(figsize=(6.8, 4.0))
-    ax.axhspan(-0.004, 0.004, color="#4C72B0", alpha=0.06, zorder=0)
-    for i, m in enumerate(methods):
-        ys = [vals[c][i] for c in cols]
-        ax.bar(x + (i - 2) * w, ys, w, color=colours[i], label=m,
-               edgecolor="white", linewidth=0.5, zorder=3)
-
-    ax.axhline(0, color="0.4", lw=0.9)
-    ax.set_xticks(x)
-    ax.set_xticklabels([f"{c}\n(SVM$^\\star$={sv:.3f})" for c, sv in zip(cols, svm_star)])
-    ax.set_ylabel(r"downstream SVM gap vs. exact  $\Delta$SVM  (higher $=$ worse)")
-    ax.set_title("Relevance-only fails; greedy / mean-field / SA reach the exact optimum")
-    ax.text(2.32, 0.0025, "classical\n$\\approx$ exact", color="#4C72B0", fontsize=7.5,
-            ha="right", va="bottom", style="italic")
-    ax.legend(frameon=False, fontsize=8.5, ncol=5, loc="upper center",
-              columnspacing=1.0, handlelength=1.3, handletextpad=0.4)
-    ax.set_ylim(-0.012, 0.064)
-    print("real-data benchmark (dSVM gap):")
-    for c in cols:
-        print(f"  {c:<11} " + " ".join(f"{v:+.3f}" for v in vals[c]))
+    # 10-dataset real-data benchmark (downstream SVM gap to the exact optimum).
+    d = json.load(open(os.path.join(RES, "realdata_benchmark.json")))
+    ds = d["datasets"]
+    names = sorted(ds, key=lambda c: ds[c]["gap_mean"]["rel"])   # ascending -> worst on top after barh
+    rel = np.array([ds[c]["gap_mean"]["rel"] for c in names]) * 100.0
+    mf = np.array([ds[c]["gap_mean"]["mf"] for c in names]) * 100.0
+    rel_e = np.array([ds[c]["gap_std"]["rel"] for c in names]) * 100.0
+    mf_e = np.array([ds[c]["gap_std"]["mf"] for c in names]) * 100.0
+    y = np.arange(len(names)); h = 0.38
+    fig, ax = plt.subplots(figsize=(6.8, 4.4))
+    ax.axvspan(-0.5, 0.5, color=CLA, alpha=0.07, zorder=0)
+    ax.barh(y + h/2, rel, h, xerr=rel_e, error_kw=dict(lw=0.8, ecolor="0.4"),
+            color=QUA, label="MI top-$k$ (relevance-only)", zorder=3)
+    ax.barh(y - h/2, mf, h, xerr=mf_e, error_kw=dict(lw=0.8, ecolor="0.4"),
+            color=CLA, label="mean-field (classical)", zorder=3)
+    ax.axvline(0, color="0.4", lw=0.9)
+    ax.set_yticks(y)
+    ax.set_yticklabels(names)
+    ax.set_xlabel(r"downstream SVM gap to exact optimum (points; higher $=$ worse)")
+    ax.set_title("Relevance-only leaves a gap; mean-field and SA reach the optimum (10 datasets)")
+    ax.text(0.97, 0.04,
+            "SA reaches the exact\noptimum on all 10  ($\\Delta$SVM$=0$)",
+            transform=ax.transAxes, ha="right", va="bottom", fontsize=8.5,
+            color=CLA, style="italic",
+            bbox=dict(boxstyle="round,pad=0.3", fc="white", ec=CLA, alpha=0.8))
+    ax.legend(frameon=False, fontsize=9, loc="lower right", bbox_to_anchor=(1.0, 0.16))
+    ax.margins(y=0.02)
+    print("real-data benchmark (dSVM gap, 10 datasets):")
+    for c in names:
+        g = ds[c]["gap_mean"]
+        print(f"  {c:<12} rel={g['rel']:+.3f} mf={g['mf']:+.3f} sa={g['sa']:+.3f}")
     _save(fig, "realdata_bars")
 
 

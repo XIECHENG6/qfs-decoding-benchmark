@@ -30,7 +30,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 
 import qfs_common as q
-import uci_loader
+from datasets import load_all_sets
 
 LAM = 1.0
 N_PRE = 18
@@ -107,7 +107,7 @@ def main():
     results = {"config": {"lam": LAM, "n_pre": N_PRE, "k": K, "seeds": SEEDS,
                           "classifiers": CLFS, "methods": METHODS},
                "datasets": {}}
-    for name, (X, y) in uci_loader.load_all().items():
+    for name, (X, y) in load_all_sets().items():
         res, Sx = bench(X, y)
         results["datasets"][name] = {"exact_subset": [int(i) for i in Sx], **res}
         print(f"=== {name} ===")
