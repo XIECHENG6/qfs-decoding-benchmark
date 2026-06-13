@@ -39,9 +39,11 @@ def mi_prefilter(X, y, n_pre):
 def bench(X, y):
     Xp = mi_prefilter(X, y, min(N_PRE, X.shape[1]))
     r, R = q.build_qubo(Xp, y)
-    _, combos, best = q.exact_solve(r, R, K, LAM)
+    Jall, combos, best = q.exact_solve(r, R, K, LAM)
     Sx = combos[best]
+    Jstar = float(Jall[best])
     gaps = {m: [] for m in METHODS}
+    gapJ = {m: [] for m in METHODS}   # objective-value gap dJ = J* - J(S)
     ex_accs = []
     for sd in SEEDS:
         ex = q.downstream_svm(Xp, y, Sx, seed=sd)
@@ -55,11 +57,13 @@ def bench(X, y):
         }
         for m in METHODS:
             gaps[m].append(ex - q.downstream_svm(Xp, y, subs[m], seed=sd))
+            gapJ[m].append(Jstar - q.eval_J(subs[m], r, R, LAM))
     return {
         "n_features_used": int(Xp.shape[1]), "n_samples": int(Xp.shape[0]),
         "svm_exact": float(np.mean(ex_accs)),
         "gap_mean": {m: float(np.mean(v)) for m, v in gaps.items()},
         "gap_std": {m: float(np.std(v)) for m, v in gaps.items()},
+        "gapJ_mean": {m: float(np.mean(v)) for m, v in gapJ.items()},
     }
 
 
@@ -76,7 +80,8 @@ def main():
         results["datasets"][name] = res
         g = res["gap_mean"]
         print(f"{name:<13}{res['n_features_used']:>5}{res['svm_exact']:>8.3f}" +
-              "".join(f"{g[m]:>+9.3f}" for m in METHODS))
+              "".join(f"{g[m]:>+9.3f}" for m in METHODS) +
+              f"   | dJ(sa)={res['gapJ_mean']['sa']:.3f} dJ(mf)={res['gapJ_mean']['mf']:.3f}")
     with open(OUT, "w") as f:
         json.dump(results, f, indent=1)
     print(f"\nsaved -> {os.path.relpath(OUT, os.path.join(HERE, '..'))}")
